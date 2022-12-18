@@ -15,18 +15,19 @@ Run `ng generate component component-name` to generate a new component. You can 
 sábado, 17 de diciembre de 2022
 20:22
 
-For
+```javascript
+//For
 <li *ngFor="let heroe of heroes">Item1</li>
 
 
-If
+//If
 <div *ngIf="heroeBorrado !== ''">
     <h3>HeroeBorrado</h3>
     <span>{{heroeBorrado}}</span>
 </div>
 
 
-NG-template
+//NG-template
 
 <div *ngIf="heroeBorrado !== ''; else noBorrado">
     <h3>HeroeBorrado:<small>{{heroeBorrado}}</small></h3>

@@ -2,26 +2,36 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
-## Development server
+## Instalacion cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install -g @angular/cli` 
 
-## Code scaffolding
+## Creacion Componente
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Directivas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+sábado, 17 de diciembre de 2022
+20:22
 
-## Running unit tests
+For
+<li *ngFor="let heroe of heroes">Item1</li>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+If
+<div *ngIf="heroeBorrado !== ''">
+    <h3>HeroeBorrado</h3>
+    <span>{{heroeBorrado}}</span>
+</div>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+NG-template
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<div *ngIf="heroeBorrado !== ''; else noBorrado">
+    <h3>HeroeBorrado:<small>{{heroeBorrado}}</small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
